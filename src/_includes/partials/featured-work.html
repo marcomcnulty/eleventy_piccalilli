@@ -5,7 +5,7 @@
       <div class="[ featured-work__intro ] [ flow flow-space-300 ]">
 
         <h2 class="[ featured-work__heading ] [ headline ] [ color-quinary-shade lg:measure-micro ]"
-            data-highlight="dark">
+          data-highlight="dark">
           {{ featuredWork.title }}
         </h2>
 
@@ -16,13 +16,17 @@
       </div>
 
       {% for item in collections.featuredWork %}
-      <a href="{{ item.url }}"
-         aria-label="See {{ item.data.title }}"
-         class="[ featured-work__item ] [ frame ]"
-         data-frame="quaternary">
+        <a href="{{ item.url }}"
+          aria-label="See {{ item.data.title }}"
+          class="[ featured-work__item ] [ frame ]"
+          data-frame="quaternary">
 
-        <img src="{{ item.data.hero.image }}" alt="{{ item.data.hero.imageAlt }}" loading="lazy" class="radius" />
-      </a>
+          <img src="{{ item.data.hero.image }}"
+              alt="{{ item.data.hero.imageAlt }}"
+              loading="lazy"
+              class="radius"
+          >
+        </a>
       {% endfor %}
 
     </div>
