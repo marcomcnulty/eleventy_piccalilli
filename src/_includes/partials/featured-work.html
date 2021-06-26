@@ -1,18 +1,13 @@
 <article class="[ featured-work ] [ dot-shadow panel ] [ bg-light-glare ]">
+
   <div class="[ wrapper ] [ flow ]">
     <div class="[ featured-work__inner ] [ flow ]">
-
       <div class="[ featured-work__intro ] [ flow flow-space-300 ]">
-
         <h2 class="[ featured-work__heading ] [ headline ] [ color-quinary-shade lg:measure-micro ]"
           data-highlight="dark">
           {{ featuredWork.title }}
         </h2>
-
-        <p class="[ featured-work__summary ] [ measure-compact ]">
-          {{ featuredWork.summary }}
-        </p>
-
+        <p class="[ featured-work__summary ] [ measure-compact ]">{{ featuredWork.summary }}</p>
       </div>
 
       {% for item in collections.featuredWork %}
@@ -24,16 +19,14 @@
           <img src="{{ item.data.hero.image }}"
               alt="{{ item.data.hero.imageAlt }}"
               loading="lazy"
-              class="radius"
-          >
+              class="radius">
         </a>
       {% endfor %}
-
     </div>
 
     <div class="[ featured-work__action ] [ flow-space-700 ]">
       <a href="/work/" class="button">See more work</a>
     </div>
-
   </div>
+
 </article>
