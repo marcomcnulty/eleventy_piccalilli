@@ -56,6 +56,12 @@
     grid-template-rows: get-size('500') auto auto auto;
     grid-template-columns: minmax(15rem, 1fr) 2fr;
 
+    @supports (display: grid) {
+      > * {
+        margin: 0;
+      }
+    }
+
     &__header {
       padding: get-size('500');
       margin: 0;
